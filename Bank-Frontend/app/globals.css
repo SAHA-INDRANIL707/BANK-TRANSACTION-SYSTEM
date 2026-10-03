@@ -1,0 +1,190 @@
+@import "tailwindcss";
+
+/* ─── Global Reset & Font ──────────────────────────────────────────── */
+:root {
+  --font-jakarta: 'Plus Jakarta Sans', sans-serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-jakarta);
+}
+
+/* ─── 3D Spheres & Design Bubbles (Sign In & Sign Up Auth Pages) ──── */
+.sphere-ambient-back {
+  background: radial-gradient(circle at 35% 30%, #3d8cfc 0%, #1a62dd 40%, #0d3e9c 80%, #08286b 100%);
+  box-shadow: 20px 24px 60px rgba(7, 26, 74, 0.45);
+}
+
+.sphere-glow-accent {
+  background: radial-gradient(circle at 38% 30%, #60a5fa 0%, #2563eb 45%, #1d4ed8 75%, #172554 100%);
+  box-shadow: 12px 18px 40px rgba(10, 37, 94, 0.38);
+}
+
+.sphere-highlight {
+  background: radial-gradient(circle at 32% 28%, #93c5fd 0%, #3b82f6 45%, #1e40af 85%, #0f172a 100%);
+  box-shadow: 10px 14px 30px rgba(6, 21, 56, 0.3);
+}
+
+.sphere-subtle {
+  background: radial-gradient(circle at 36% 32%, #38bdf8 0%, #1d4ed8 60%, #0c2d6b 100%);
+  box-shadow: -8px 12px 30px rgba(6, 22, 60, 0.25);
+}
+
+/* Code2.html Auth Sphere Variants */
+.sphere-main {
+  background: radial-gradient(circle at 38% 30%, #2977f5 0%, #1557c6 45%, #0e3b8a 90%, #0a2d6e 100%);
+  box-shadow: 18px 20px 45px rgba(10, 35, 85, 0.22);
+}
+
+.sphere-bottom-left {
+  background: radial-gradient(circle at 35% 30%, #2f7ff8 0%, #185ecc 50%, #0d3b8c 100%);
+  box-shadow: 10px -8px 30px rgba(10, 35, 85, 0.2);
+}
+
+.sphere-center {
+  background: radial-gradient(circle at 35% 28%, #3988fb 0%, #1a62d4 45%, #0e4099 85%, #092c70 100%);
+  box-shadow: 12px 18px 36px rgba(8, 30, 80, 0.35);
+}
+
+.sphere-corner {
+  background: radial-gradient(circle at 35% 30%, #2d7df7 0%, #175dcc 55%, #0d3b8a 100%);
+  box-shadow: -8px -8px 25px rgba(10, 35, 85, 0.15);
+}
+
+/* Auth Card Shadows & Glass Pills */
+.card-shadow {
+  box-shadow: 0 25px 60px -12px rgba(8, 28, 72, 0.35), 0 12px 24px -8px rgba(0, 0, 0, 0.18);
+}
+
+.card-shadow-modern {
+  box-shadow: 0 25px 60px -15px rgba(2, 23, 71, 0.32),
+              0 0 0 1px rgba(255, 255, 255, 0.7) inset,
+              0 10px 25px -5px rgba(0, 0, 0, 0.08);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 20px rgba(4, 25, 74, 0.15);
+}
+
+/* ─── Shared Consistent Background (Auth & Dashboard) ─────────────── */
+/* Matches the exact signature BOI vibrant blue gradient used on Sign In & Sign Up */
+.boi-bg {
+  background: linear-gradient(135deg, #175cd3 0%, #1550bd 50%, #0f3b8e 100%);
+  min-height: 100vh;
+  color: #ffffff;
+}
+
+/* ─── Dashboard Ambient Spheres ────────────────────────────────────── */
+.ambient-sphere {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.sphere-1 {
+  width: 440px;
+  height: 440px;
+  left: -100px;
+  top: -80px;
+  background: radial-gradient(circle at 35% 35%, rgba(59, 130, 246, 0.4) 0%, rgba(37, 99, 235, 0.2) 50%, rgba(30, 58, 138, 0) 75%);
+  filter: blur(48px);
+}
+
+.sphere-2 {
+  width: 480px;
+  height: 480px;
+  right: -120px;
+  bottom: -100px;
+  background: radial-gradient(circle at 40% 40%, rgba(96, 165, 250, 0.3) 0%, rgba(30, 64, 175, 0.18) 55%, rgba(15, 23, 42, 0) 80%);
+  filter: blur(55px);
+}
+
+/* ─── Glassmorphism Cards ──────────────────────────────────────────── */
+.glass-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+.glass-white-panel {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 18px 36px -10px rgba(15, 23, 42, 0.22);
+}
+
+/* ─── SVG Chart Styles ─────────────────────────────────────────────── */
+.chart-grid-line {
+  stroke: rgba(255, 255, 255, 0.12);
+  stroke-dasharray: 4 6;
+  stroke-width: 1;
+}
+
+.chart-area {
+  fill: url(#chartGradient);
+}
+
+.chart-stroke {
+  stroke: #60a5fa;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 3px 6px rgba(96, 165, 250, 0.4));
+}
+
+.chart-point {
+  fill: #ffffff;
+  stroke: #2563eb;
+  stroke-width: 2.5;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.chart-point:hover {
+  r: 5.5;
+  stroke: #60a5fa;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
+}
+
+/* ─── Scrollbar Utility ────────────────────────────────────────────── */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ─── Smooth Feature Panel Entrance Animation ────────────────────────── */
+@keyframes featureFadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.992);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-feature-fade {
+  animation: featureFadeSlideIn 0.38s cubic-bezier(0.16, 1, 0.3, 1) both;
+  will-change: opacity, transform;
+  height: 100%;
+  width: 100%;
+}
+
